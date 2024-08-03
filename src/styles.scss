@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+//VARIAVEIS
+$bgColor: #EDF2FD;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration:none;   
+}
+
+li{
+    list-style-type: none;
+}
+
+
+
+
+
