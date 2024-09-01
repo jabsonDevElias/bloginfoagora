@@ -1,8 +1,11 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +16,9 @@ import { MenuhorizontalComponent } from './menuhorizontal/menuhorizontal.compone
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { NoticiaComponent } from './noticia/noticia.component';
 import { HomeComponent } from './home/home.component';
+import { ListadenoticiasComponent } from './listadenoticias/listadenoticias.component';
+import { registerLocaleData } from '@angular/common';
+import { CategoriasComponent } from './categorias/categorias.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,9 @@ import { HomeComponent } from './home/home.component';
     MenuverticalComponent,
     MenuhorizontalComponent,
     NoticiaComponent,
-    HomeComponent
+    HomeComponent,
+    ListadenoticiasComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,7 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
     MatCardModule
   ],
-  providers: [
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' },
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
