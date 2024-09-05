@@ -8,7 +8,9 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'noticia', component: NoticiaComponent }];
+  { path: 'noticia/:categoria', component: NoticiaComponent },
+  {path: 'noticia/:categoria/:id', component: NoticiaComponent }
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

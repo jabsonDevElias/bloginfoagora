@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-noticia',
@@ -6,6 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './noticia.component.scss'
 })
 export class NoticiaComponent {
+  constructor(private route: ActivatedRoute) { }
+
+  titulo:any= "";
+  paramCategoria:string="";
+
+  ngOnInit(): void {
+    this.titulo = this.route.snapshot.paramMap.get('categoria');
+    this.paramCategoria = this.titulo;
+  }
+
+  
+
     noticia:any= [
       {
         data: '2024-09-01',

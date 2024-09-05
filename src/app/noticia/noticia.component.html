@@ -4,15 +4,16 @@
     </div> -->
 
      <div class="col-12 d-flex container-fluid flex-wrap">
-        <h3 class="col-12 mt-2">Categoria da Noticia</h3>
+        
         <div class="col-3">
+          <h1 class="col-12 mt-2">{{titulo}}</h1>
           <app-categorias></app-categorias>
         </div>
-         <div class="col-6 bg-white mt-4 rounded-4">
+         <div class="card-leitura col-6 bg-white mt-4 rounded-4">
           <div class="col-12 bg-secondary border border-white rounded rounded-4 " style="height: 40vh;"></div>
           <div class="col-12 p-2">
-            <div class="col-3 d-flex flex-wrap justify-content-between">
-              <h4 class="m-0 mt-2 col-12">Titulo da Noticia</h4>
+            <h4 class="m-0 mt-2 col-12">Titulo da Noticia</h4>
+            <div class="col-3 d-flex flex-wrap justify-content-between">          
               <span style="font-size: 1em;">01/03/2024 23:59:59  </span>
               <!-- <a href=""><mat-icon>share</mat-icon></a> -->
             </div>
@@ -27,7 +28,7 @@
           </div>
         </div>
         <div class="col-3">      
-          <app-listadenoticias *ngFor="let item of noticia;" [titulo]="item.titulo" [data]="item.data" [imagem]="item.imagem"></app-listadenoticias>
+          <app-listadenoticias *ngFor="let item of noticia;index as i" [titulo]="item.titulo" [data]="item.data" [imagem]="item.imagem " [categoria]="paramCategoria" [id]="i"></app-listadenoticias>
         </div>
     </div>
  

@@ -1,1 +1,7 @@
-<p>categorias works!</p>
+<div class="col-12 " >
+        <div class="col-10">
+            <div class="list-group">
+                <a href="noticia/{{item}}" *ngFor="let item of categorias;index as i;" class="list-group-item list-group-item-action mb-2 rounded-2" aria-current="true">{{item}}</a>
+              </div>
+        </div>
+</div>
