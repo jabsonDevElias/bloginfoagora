@@ -29,8 +29,8 @@
             </div>
           </div>
           <div *ngIf="!idNoticia;" class="text-center">
-            <div *ngFor="let item of noticiaEscolhida;">
-              <a href="http://" class="fs-3">{{item.titulo}}</a>
+            <div *ngFor="let item of noticiaEscolhida;index as i">
+              <a href="noticia/{{item.categoria}}/{{i}}" class="fs-3">{{item.titulo}}</a>
               <br/>
             </div>
           </div>
