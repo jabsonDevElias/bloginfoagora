@@ -19,8 +19,14 @@ Finalizado
    </div>
 
    <div style="width:40%;">
-     <img src="galeria/cadastrodealarme.jpg" style="border-radius:5px"/>
+     <img src="galeria/02.png" style="border-radius:5px"/>
    </div>  
+
+   <div style="width:40%;">
+     <img src="galeria/03.png" style="border-radius:5px"/>
+   </div>  
+
+   
 </div>
 
  <!-- ![Imagem 1](galeria/Home.png) 
