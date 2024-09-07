@@ -11,13 +11,17 @@ export class NoticiaComponent {
 
   titulo:any= "";
   paramCategoria:string="";
+  idNoticia:any = "";
+  noticiaEscolhida:any = "";
+  
 
   ngOnInit(): void {
     this.titulo = this.route.snapshot.paramMap.get('categoria');
     this.paramCategoria = this.titulo;
+    this.idNoticia = this.route.snapshot.paramMap.get('id');
+    this.noticiaEscolhida = this.noticia[this.idNoticia];
   }
 
-  
 
     noticia:any= [
       {
@@ -46,5 +50,6 @@ export class NoticiaComponent {
       }
   ];
   
+
   
 }
