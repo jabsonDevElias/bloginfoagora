@@ -20,14 +20,18 @@ export class NoticiaComponent {
     this.idNoticia = this.route.snapshot.paramMap.get('id');
 
     this.noticiaEscolhida = this.noticia.filter((item:any) => item.categoria === this.paramCategoria);
+    
     if(this.idNoticia){
-       this.noticiaEscolhida = this.noticia[this.idNoticia];
+       this.noticiaEscolhida = this.noticiaEscolhida.filter((item:any) => item.id == this.idNoticia);
     }
+
+
   }
 
 
   noticia: any = [
     {
+      id:1,
       data: '2024-09-01',
       titulo: 'Lançamento do Novo Smartphone',
       texto: 'A empresa XYZ anunciou o lançamento do seu mais novo smartphone, que promete revolucionar o mercado com suas novas tecnologias.',
@@ -35,6 +39,7 @@ export class NoticiaComponent {
       categoria: 'Tecnologia'
     },
     {
+      id:2,
       data: '2024-08-28',
       titulo: 'Avanços na Inteligência Artificial',
       texto: 'Pesquisadores fizeram um grande avanço no desenvolvimento de IA, criando um algoritmo capaz de aprender de forma autônoma em velocidades recordes.',
@@ -42,6 +47,7 @@ export class NoticiaComponent {
       categoria: 'Educação'
     },
     {
+      id:3,
       data: '2024-08-25',
       titulo: 'Conferência de Desenvolvedores 2024',
       texto: 'A conferência anual para desenvolvedores foi realizada com grande sucesso, apresentando novas ferramentas e técnicas para a comunidade.',
@@ -49,6 +55,7 @@ export class NoticiaComponent {
       categoria: 'Tecnologia'
     },
     {
+      id:4,
       data: '2024-08-20',
       titulo: 'Nova Atualização de Software Disponível',
       texto: 'A versão mais recente do software ABC foi lançada, trazendo melhorias significativas de desempenho e novas funcionalidades.',
