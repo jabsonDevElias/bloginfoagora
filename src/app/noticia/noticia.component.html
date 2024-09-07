@@ -28,8 +28,14 @@
               </div>
             </div>
           </div>
+          <div *ngIf="!idNoticia;" class="text-center">
+            <div *ngFor="let item of noticiaEscolhida;">
+              <a href="http://" class="fs-3">{{item.titulo}}</a>
+              <br/>
+            </div>
+          </div>
         </div>
-        <div class="col-3">      
+        <div class="col-3" >      
           <app-listadenoticias *ngFor="let item of noticia;index as i" [titulo]="item.titulo" [data]="item.data" [imagem]="item.imagem " [categoria]="paramCategoria" [id]="i"></app-listadenoticias>
         </div>
     </div>
