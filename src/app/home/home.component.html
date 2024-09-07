@@ -3,11 +3,11 @@
      <app-menuhorizontal></app-menuhorizontal>
    </div>
     <div class="col-12 d-flex container-fluid">
-      <div class="col-6 bg-secondary border border-white rounded rounded-3" style="height: 80vh;"></div>
+      <a href="noticia/{{noticia[0].categoria}}/{{noticia[0].id}}" class="col-6"><img class="col-12 bg-secondary border border-white rounded rounded-3" style="height: 80vh;" src="{{noticia[0].imagem}}"/></a>
       <div class="col-6 d-flex flex-wrap">
-         <div class="col-12 bg-secondary border border-white rounded rounded-3" style="height: 40vh;"></div>
-         <div class="col-6 bg-secondary border border-white rounded rounded-3" style="height: 40vh;"></div>
-         <div class="col-6 bg-secondary border border-white rounded rounded-3" style="height: 40vh;"></div>
+         <a href="noticia/{{noticia[1].categoria}}/{{noticia[1].id}}" class="col-12"><img class="col-12 bg-secondary border border-white rounded rounded-3" src="{{noticia[1].imagem}}" style="height: 40vh;"/></a>
+         <a href="noticia/{{noticia[2].categoria}}/{{noticia[2].id}}" class="col-6"><img class="col-12 bg-secondary border border-white rounded rounded-3" src="{{noticia[2].imagem}}" style="height: 40vh;"/></a>
+         <a href="noticia/{{noticia[3].categoria}}/{{noticia[3].id}}" class="col-6"><img class="col-12 bg-secondary border border-white rounded rounded-3" src="{{noticia[3].imagem}}" style="height: 40vh;"/></a>
       </div>
     </div>
 

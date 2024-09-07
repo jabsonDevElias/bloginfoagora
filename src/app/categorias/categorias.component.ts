@@ -11,7 +11,7 @@ export class CategoriasComponent {
       return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
     }
 
-     categorias:string[] = [
+    categorias:string[] = [
       "Política",
       "Esportes",
       "Economia",
@@ -21,3 +21,4 @@ export class CategoriasComponent {
       "Educação"
      ]
 }
+
